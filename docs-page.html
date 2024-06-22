@@ -53,7 +53,7 @@
 		                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
 		                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
 		            </ul><!--//social-list-->
-		            <a href="#" class="btn btn-primary d-none d-lg-flex">Get Started</a>
+		            
 	            </div><!--//docs-top-utilities-->
             </div><!--//container-->
         </div><!--//branding-->
@@ -95,6 +95,9 @@
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>System Model</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Use-case model</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Relationships</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>ER Diagram</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Entities and Attributes relationship</a></li>
+				    
 				  
 			    </ul>
 
@@ -432,17 +435,70 @@
 						</ol>	
 					</section><!--//section-->
 			    </article><!--//docs-article-->
-			   
+				<article class="docs-article" id="section-5">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">ER Diagram</h1>
+					    <section class="docs-intro">
+						    <p>The Entity-Relationship (ER) diagram represents the data model for the Virtual Office System. It outlines the key entities, their attributes, and the relationships between them</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-5-1">
+						<h2 class="section-heading">Entities and Attributes relationship</h2>
+						<ol>
+							<li>User - Office</li>
+								<ul>
+									<li><b>Type:</b> Manages</li>
+									<li><b>Description: </b>Users can manage multiple offices. This relationship shows the administrative control users have over offices.</li>
+								</ul>
+							<li>Office - Subscription
+								<ul>
+									<li><b>Type:</b> Includes</li>
+									<li><b>Description: </b>Each office has one or more subscription plans associated with it.</li>
+								</ul>
+							</li>
+							<li>User - Task
+								<ul>
+									<li><b>Type:</b>Provides, Attends</li>
+									<li><b>Description: </b>Users provide tasks to team members, and team members attend (complete) these tasks.</li>
+								</ul>
+							</li>
+							<li>User - Feedback
+								<ul>
+									<li><b>Type:</b> Provides</li>
+									<li><b>Description: </b>Users provide feedback about their experience in the virtual office.
+									</li>
+								</ul>
+							</li>
+							<li>User - Support
+								<ul>
+									<li><b>Type:</b> Seeks</li>
+									<li><b>Description: </b>Users seek support for any issues they encounter.</li>
+								</ul>
+							</li>
+							<li>User - Meeting
+								<ul>
+									<li><b>Type:</b>Attends</li>
+									<li><b>Description: </b> Users attend meetings scheduled in the virtual office.</li>
+								</ul>
+							</li>
+						</ol>
+						</section><!--//section-->
+						<h3>Use Case Diagram</h3>
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+						        <a href="assets/images/ER Diagram.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/ER Diagram.png" alt="" title=""/></a>
+							</div>
+						</div><!--//gallery-->
+					
+			    </article><!--//docs-article-->
 
 			    <footer class="footer">
 				    <div class="container text-center py-5">
 				        <ul class="social-list list-unstyled pt-4 mb-0">
-						    <li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li> 
-				            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+						    <li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-google fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
 				        </ul><!--//social-list-->
 				    </div>
 			    </footer>
