@@ -109,6 +109,22 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">User Management</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Task Management</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Class Diagram</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-10"><span class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>System Design</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-10-1">Purpose of the System</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-2">EER (Entity-Relationship)</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-3">Normalization</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-4">Relational Tables</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-5"> OO-Relational Mapping</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-6">Design Goals</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-7">Current Software Architecture</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-8"> Proposed Software Architecture</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-9">Subsystem Decomposition</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-10">Component Diagram</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-11">Deployment Diagram</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-12">Persistent Data Management</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-13">Access Control and Security</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-14">Global Software Control</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-10-15">Boundary Conditions</a></li>
 				    
 				  
 			    </ul>
@@ -670,10 +686,137 @@
 							<script src="https://gist.github.com/Lone-lancer/ad23ebfe6554b7a0982bd36e7524feca.js"></script>
 							
 							<!-- ** Embed github code ends ** -->
-						</div><!--//docs-code-block-->
+						</div><!--//docs-code-block-->	
+			    </article><!--//docs-article-->
+				<article class="docs-article" id="section-10">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">System Design</h1>
+					    <section class="docs-intro">
+						    <p>System design details the architectural and technical specifications of the Lancers Hub platform, providing a blueprint for the system's design. It outlines how components interact to meet both functional and non-functional requirements, ensuring the development of a robust, scalable, and maintainable platform.</p>
+						</section><!--//docs-intro-->
+				    </header>
+					<section class="docs-section" id="item-10-1">
+						<h2 class="section-heading">Purpose of the System</h2>
+						<p>The Lancers Hub system aims to create a virtual office environment to facilitate remote work and collaboration among freelancers, startups, and remote workers. It offers a flexible, cost-effective, and immersive workspace.</p>
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-2">
+						<h2 class="section-heading">EER (Entity-Relationship)</h2>
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/EER.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/EER.png" alt="" title=""/></a>
+							</div>
+						</div><!--//gallery-->
+						<p>Defines the entities and attributes in the system:</p>
+						<ul>
+							<li>User: UserID, Name, Email, Password, Role, RegistrationDate</li>
+							<li>Workspace: WorkspaceID, Name, Description, CreatedDate, CreatedBy</li>
+							<li>Project: ProjectID, Name, Description, StartDate, EndDate, WorkspaceID</li>
+							<li>Task: TaskID, Title, Description, Status, DueDate, AssignedTo, ProjectID</li>
+							<li>Message: MessageID, Content, SentDate, SenderID, WorkspaceID</li>
+							<li>File: FileID, FileName, FilePath, UploadedDate, UploadedBy, WorkspaceID</li>
+						</ul>	
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-3">
+						<h2 class="section-heading">Normalization</h2>
+						<p>Focuses on organizing the database to reduce redundancy and improve data integrity. It ensures that data is stored efficiently by dividing larger tables into smaller, manageable ones.</p>
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-4">
+						<h2 class="section-heading">Relational Tables</h2>
+						<p>Details the relationships between the various tables in the database, ensuring referential integrity and facilitating efficient data retrieval and manipulation.</p>
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-5">
+						<h2 class="section-heading"> OO-Relational Mapping</h2>
+						<p>Describes how object-oriented models map to relational databases. This includes the transformation of class diagrams into tables, ensuring that the object-oriented design is effectively implemented in the relational database.</p>
+					</section><!--//section-->
+					<div class="simplelightbox-gallery row mb-3">
+						<div class="col-12 col-md-4 mb-3">
+							<a href="assets/images/1.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/1.png" alt="" title=""/></a>
+						</div>
+						<div class="col-12 col-md-4 mb-3">
+							<a href="assets/images/2.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/2.png" alt="" title=""/></a>
+						</div>
+						<div class="col-12 col-md-4 mb-3">
+							<a href="assets/images/3.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/3.png" alt="" title=""/></a>
+						</div>
+					</div><!--//gallery-->
+					<section class="docs-section" id="item-10-6">
+						<h2 class="section-heading">Design Goals</h2>
+						<p>The goals include:</p>
+						<ol>
+							<li>Scalability: Handle increasing users and data without performance loss.</li>
+							<li>Performance: Fast response times and efficient processing.</li>
+							<li>Usability: User-friendly and intuitive interface.</li>
+							<li>Maintainability: Easy to maintain, update, and extend.</li>
+							<li>Reliability: Consistent performance and fault tolerance.</li>
+							<li>Interoperability: Easy integration with other systems.</li>
+							<li>Flexibility: Adaptable to changing requirements.</li>
+						</ol>	
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-7">
+						<h2 class="section-heading"> Current Software Architecture</h2>
+						<p>The current architecture supports a robust virtual office experience:</p>
+						<ol>
+							<li>Frontend: Developed using Unity for 3D rendering and interactivity, with WebRTC for real-time communication and Three.js for 2D graphics.</li>
+							<li>Backend: Utilizes Firebase for serverless backend services, including a real-time database, authentication, and cloud functions. Node.js and Express.js are used for server-side logic and APIs.</li>
+							<li>Database: Firebase Realtime Database for data storage and synchronization.</li>
+							<li>Security: Managed by Firebase Authentication and Security Rules.</li>
+							<li>Security: Managed by Firebase Authentication and Security Rules.</li>
+							<li>Communication: WebSockets and WebRTC for real-time data and communication.</li>
+						</ol>
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-8">
+						<h2 class="section-heading"> Proposed Software Architecture</h2>
+						<p>Aims to enhance the platform's scalability and maintainability.</p>
+
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-9">
+						<h2 class="section-heading"> Subsystem Decomposition</h2>
+						<p>The system is divided into subsystems for modular design:</p>
+						<li>User Management: Handles authentication, authorization, and profile management.</li>
+						<li>Workspace Management: Manages the creation and organization of virtual workspaces.</li>
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/9.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/9.png" alt="" title=""/></a>
+							</div>
+						</div><!--//gallery-->
 						
-					    
-					
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-10-10">
+						<h2 class="section-heading">Component Diagram</h2>
+						<p>Illustrates the interaction between various components within the system, ensuring each component’s role and interactions are clearly defined.</p>
+						
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-11">
+						<h2 class="section-heading"> Deployment Diagram</h2>
+						<p>Outlines the physical deployment of software components across hardware nodes, detailing how different parts of the system are hosted and interact in a production environment.</p>
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/10.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/10.png" alt="" title=""/></a>
+							</div>
+						</div><!--//gallery-->
+						
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-12">
+						<h2 class="section-heading">Persistent Data Management</h2>
+						<p>Details the strategies for data storage, access, and management to ensure data persistence and integrity across the platform.</p>
+						
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-13">
+						<h2 class="section-heading">Access Control and Security</h2>
+						<p>Describes the measures to secure the system, including user authentication, authorization, data encryption, and regular security audits.</p>
+						
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-14">
+						<h2 class="section-heading">Global Software Control</h2>
+						<p>Defines the control mechanisms for managing the system’s state, ensuring coordinated and coherent system behavior.</p>
+						
+					</section><!--//section-->
+					<section class="docs-section" id="item-10-15">
+						<h2 class="section-heading"> Boundary Conditions</h2>
+						<p>Specifies the system's behavior under various conditions, including startup, shutdown, error states, and other exceptional scenarios.</p>
+						
+					</section><!--//section-->
 			    </article><!--//docs-article-->
 
 			    <footer class="footer">
